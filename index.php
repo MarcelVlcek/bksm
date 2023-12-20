@@ -2,13 +2,15 @@
     
 <?php include 'shared/header.php'; ?>
     <div class="fadecovers">
-        <img src="/images/cover.jpg" alt="pozadie" class="cover"  >
-        <img src="/images/cover-02.jpg" alt="pozadie"  class="cover"  >
-        <img src="/images/cover-01.jpg" alt="pozadie"  class="cover"  > 
+        
+        <img src="/images/cover-03.JPG" alt=""  class="cover"  > 
+        <img src="/images/cover.jpg" alt="" class="cover"  >
+        <img src="/images/cover-02.JPG" alt=""  class="cover"  >
+        <img src="/images/cover-01.jpg" alt=""  class="cover"  > 
     </div>
     <div class="center-content club-descrip">
         <article class="container main-content">
-            <h2 class="bksm"><i>Vitajte na stránke bežeckého klubu Spartak Medzev.</i></h2>
+            <h2 class="bksm">Vitajte na stránke bežeckého klubu Spartak Medzev</h2>
         
             <p>Klub bol založený
                 v roku 2010. Pri zrode stáli <i class="gotfather">Ján Imling, Peter Paľa, Jozef Jaššo, Marián Vlček,
@@ -41,7 +43,7 @@
 
                 </div> 
                 <button class="download-button">
-                    <a href="/files/2%.pdf" download >
+                    <a href="/files/tlačivo.pdf" download >
                         <p><i class="fa-solid fa-cloud-arrow-down"></i> &nbsp; Tlačivo 2%</p>
                     </a>
                 </button>

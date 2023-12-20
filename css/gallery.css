@@ -1,15 +1,26 @@
 
+
+
 .center-gallery{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .gallery{
     width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 20px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .image{
@@ -32,18 +43,35 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     color: #ffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     opacity: 0;
+    -webkit-transition: opacity 0.25s;
+    -o-transition: opacity 0.25s;
     transition: opacity 0.25s;
 }
 
 
 .image-overlay > * {
-    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    -o-transition: transform 0.25s;
     transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
 .image-overlay:hover{
@@ -51,7 +79,9 @@
 }
 
 .image-overlay:hover > *{
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
 
 }
 

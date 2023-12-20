@@ -1,15 +1,15 @@
 <?php
-            $db_host = "localhost";
-            $db_user = "vlko";
-            $db_password = "Vlkinderko22";
-            $db_name = "bksm";
+            $db_host = "";
+            $db_user = "";
+            $db_password = "";
+            $db_name = "";
         
         //CREATE CONNECTION
-        $connection = new mysqli($db_host, $db_user, $db_password, $db_name );    
+        $conn = new mysqli($db_host, $db_user, $db_password, $db_name );    
 
         //CHECK CONNECTION
-        if ($connection->connect_error) {
-            die("Connection failed: " . $connection->connect_error);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
 
 

@@ -1,15 +1,33 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100vh;
 
 }
 
 .description{
     max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 article h1{
@@ -21,7 +39,7 @@ article h1{
 article.halfmarathon{
    max-width: 50%;
    text-align: justify;
-   margin-bottom: 60px;
+   margin-bottom: 20px;
   
 }
 
@@ -44,7 +62,7 @@ article h2{
 }
 
 h2.subtitle{
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 aside.right{
@@ -53,7 +71,16 @@ aside.right{
     font-family: 'Dancing Script'  , cursive;
     font-size: 20px;
     font-size: 600;
-    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 video{
@@ -64,9 +91,16 @@ video{
 
 
 .registration{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -133,7 +167,9 @@ video{
 
    
     aside.right{
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
     }
 
@@ -150,8 +186,13 @@ video{
 
 @media (max-width:526px){
     .description{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center
     }
 
@@ -164,19 +205,33 @@ video{
         text-align: center;
     }
 
+    .hpm-title{
+        margin: 20px 0;
+        font-size: 18px;
+
+    }
+
     .halfmarathon >p {
         margin: 20px 15px;
         text-align: justify;
         padding: 0;
+        font-size: 12px;
+        text-align: left;
     }
 
-    .hpm-title{
-        margin: 40px 0;
+    .poem{
+        width: 250px;
+        margin: 0px;
+    }
+
+    .hpm-video{
+        margin: 20px 0;
+       
 
     }
 
     h2.subtitle {
-        margin-top: 40px;
+        margin-top: 20px;
     }    
 
 }

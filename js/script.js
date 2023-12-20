@@ -18,28 +18,50 @@ $(document).ready(function() {
 
 
 /*
- * BACK TO TOP 
- */
+  /*
+    * BACK TO TOP 
+    */
+  document.addEventListener('DOMContentLoaded', function() {
+  var backToTop = document.createElement('a');
+  backToTop.href = '#home';
+  backToTop.className = 'back-to-top';
 
-    var backToTop = $('<a>', {
-        href: '#home',
-        class: 'back-to-top',
-        html: '<i class="fa-solid fa-circle-arrow-up fa-3x"></i>'
-    });
+  var arrowIcon = document.createElement('i');
+  arrowIcon.className = 'fa-solid fa-circle-arrow-up fa-3x';
+  
+  backToTop.appendChild(arrowIcon);
 
-    backToTop
-            .hide()
-            .appendTo('body')
-            .on('click', function(){
-                $('body').animate({ scrollTop: 0 });
-            });
+  backToTop.style.display = 'none';
+  document.body.appendChild(backToTop);
 
-            var win = $(window);
-            win.on('scroll', function(){
-                if (win.scrollTop() >= 100) backToTop.fadeIn();
-                else backToTop.hide();
-            });
+  backToTop.addEventListener('click', function() {
+      scrollToTop();
+  });
 
+  window.addEventListener('scroll', function() {
+      if (window.scrollY >= 100) {
+          fadeIn(backToTop);
+      } else {
+          hide(backToTop);
+      }
+  });
+
+  function scrollToTop() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+
+  function fadeIn(element) {
+      element.style.display = 'block';
+  }
+
+  function hide(element) {
+      element.style.display = 'none';
+  }
+
+});
     
 /*
  * NAVIGATION ACTIVE
@@ -62,8 +84,9 @@ document.querySelectorAll('.nav-link').forEach
 
 
 const toggleBtn = document.querySelector('.toggle-btn')
-const toggleBtnIcon = document.querySelector('.toggle-btn i')
+const toggleBtnIcon = document.querySelector('.toggle-btn-icon')
 const dropDownMenu = document.querySelector('.dropdown-menu')  
+
 
 toggleBtn.onclick = function () {
     dropDownMenu.classList.toggle('open')
@@ -77,35 +100,35 @@ toggleBtn.onclick = function () {
 
 
 
+
+
+
 /*
  *  READ MORE BUTTON 
  */
 
 
+const cardHolders = document.querySelectorAll('.card-holder');
 
-const btn = document
-    .querySelector('.read-more-btn');
-
-const text = document
-    .querySelector('.card__read-more');
-
-const cardHolder = document
-    .querySelector('.card-holder');
-
-cardHolder
-    .addEventListener('click', e => {
-
+cardHolders.forEach(cardHolder => {
+    cardHolder.addEventListener('click', e => {
         const current = e.target;
+        const isReadMoreBtn = current.classList.contains('read-more-btn');
 
-        const isReadMoreBtn = current.className.includes('read-more-btn');
-
-        if (!isReadMoreBtn)
+        if (!isReadMoreBtn) {
             return;
+        }
 
-        const currentText = e.target.parentNode.querySelector('.card__read-more');
+        const currentCard = current.closest('.card');
+        const currentText = currentCard.querySelector('.card__read-more');
 
         currentText.classList.toggle('card__read-more--open');
-
-        current.textContent = current.textContent.includes('Viac...') ? 'Menej...' : 'Viac...';
-
+        current.textContent = currentText.classList.contains('card__read-more--open') ? 'Menej...' : 'Viac...';
     });
+});
+
+
+
+
+
+

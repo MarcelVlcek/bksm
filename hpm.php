@@ -29,7 +29,7 @@
         
              
         <aside class="right">
-            <p>
+            <p class="poem">
                 Tam v krásnom hlbokom údolí<br>
                 kde mnoho prameňov šumí<br>
                 tam, kde vyviera riečka Bodva <br>
@@ -37,23 +37,14 @@
                 a ešte aj dnes 
                 v skorých ranných hodinách<br>
                 ozýva sa klepot stáročných hámrov<br>
-                tam leží mestečko Medzev.
-            
-                <video src="video/hamornicky2023.mp4" width="300px" controls muted autoplay loop>
+                tam leží mestečko Medzev.<br>
+            </p>  
+                <iframe width="300" height="169" class="hpm-video" src="https://www.youtube.com/embed/KwolClDfblc" frameborder="0" allowfullscreen autoplay></iframe>
                     
-                </video>
 
         </aside>
     </section> 
 
-    <div class="registration">
-        <h2 class="">20. ročník hámorníckeho polmaratónu sa uskutoční dňa 3.7.2024 </h2>
-        <a href="#" class="reg-btn">Registrácia</a> 
-
-        <h2 class="">Výsledky 20. ročníka hámorníckeho polmaratónu</h2>
-        <a href="#" class="res-btn">Výsledky</a>
-    </div>
-    
     
 
 <?php include 'shared/footer.php'; ?> 

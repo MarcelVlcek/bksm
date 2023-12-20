@@ -17,7 +17,7 @@ if ($stmt->fetch()) {
 
     // Nastavenie hlaviciek
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    header('Content-Disposition: attachment; filename="' . basename($competetionName) . '.xlsx"');
+    header('Content-Disposition: attachment; filename="' . basename($competetionName) . '.xls"');
     header('Pragma: public'); 
     header('Expires: 0');
     header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
